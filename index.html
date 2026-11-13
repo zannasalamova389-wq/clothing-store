@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Гардероб - Интернет-магазин</title>
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <h1>Мой Гардероб</h1>
+        <p>Стильная одежда для любого случая</p>
+    </header>
+
+    <!-- Сетка с товарами -->
+    <main class="catalog">
+        
+        <!-- Товар 1: Черная юбка -->
+        <div class="card">
+            <img src="skirt-black.jpg" alt="Черная юбка" class="card-img">
+            <div class="card-info">
+                <h3>Черная юбка-солнце</h3>
+                <p class="price">2 500 ₽</p>
+                <!-- Обратите внимание: название картинки (skirt-black.jpg) должно совпадать с файлом на GitHub -->
+                <button class="btn-buy" onclick="openModal('Черная юбка-солнце', '2500', 'skirt-black.jpg', 'Элегантная черная юбка-солнце. Отлично подходит для повседневной носки.')">Подробнее</button>
+            </div>
+        </div>
+
+        <!-- Товар 2: Красное платье -->
+        <div class="card">
+            <img src="dress-red.jpg" alt="Красное платье" class="card-img">
+            <div class="card-info">
+                <h3>Красное платье в горошек</h3>
+                <p class="price">4 200 ₽</p>
+                <button class="btn-buy" onclick="openModal('Красное платье в горошек', '4200', 'dress-red.jpg', 'Яркое и женственное платье в стиле ретро. Привлечет внимание на любом празднике.')">Подробнее</button>
+            </div>
+        </div>
+
+        <!-- Товар 3: Белая блузка -->
+        <div class="card">
+            <img src="blouse-white.jpg" alt="Белая блузка" class="card-img">
+            <div class="card-info">
+                <h3>Белая блузка</h3>
+                <p class="price">1 800 ₽</p>
+                <button class="btn-buy" onclick="openModal('Белая блузка', '1800', 'blouse-white.jpg', 'Классическая белая блузка с завязками. Идеально для офиса или учебы.')">Подробнее</button>
+            </div>
+        </div>
+
+        <!-- Товар 4: Зеленое платье -->
+        <div class="card">
+            <img src="dress-green.jpg" alt="Зеленое платье" class="card-img">
+            <div class="card-info">
+                <h3>Изумрудное платье</h3>
+                <p class="price">3 800 ₽</p>
+                <button class="btn-buy" onclick="openModal('Изумрудное платье', '3800', 'dress-green.jpg', 'Роскошное зеленое платье с пышной юбкой. Для особых случаев.')">Подробнее</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Всплывающее окно (Модальное) -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <!-- Сюда скрипт будет вставлять картинку -->
+            <img id="modal-img" src="" alt="Товар" class="modal-img">
+            <h2 id="modal-title">Название</h2>
+            <p id="modal-desc">Описание</p>
+            <p id="modal-price" class="price">Цена</p>
+            <button class="btn-add-cart">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2026 Жанна. Мой Гардероб.</p>
+    </footer>
+
+    <!-- Подключаем скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>
